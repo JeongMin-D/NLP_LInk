@@ -13445,6 +13445,56 @@ keywords : [&#39;투자자&#39;, &#39;사업&#39;, &#39;사회&#39;, &#39;성과
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 개인 텍스트 데이터 활용</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">[곰 같은 사람]</span>
+<span class="s1">저는 곰 같다는 소리를 자주 듣는 사람입니다. 외형적으로 닮은 부분도 있지만, 리더로서, 구성원으로서 언제나 묵묵하게 저 자신이 해야 할 일을 했기 때문입니다. &#39;디지털 인문 예술 입문&#39;이라는 수업에서 마지막 조별 프로젝트를 제출해야 하는 일이 있었습니다. 그 당시 조원들은 수업 시간에 잠깐 배운 파이썬 프로그램을 활용할 것을 제안했고, 교수님께서는 어려울 것이니 실패를 통해 배운 것들을 제출하라고 말씀하셨습니다. 교수님의 말씀에 조원들도 약한 마음을 가졌지만 제가 솔선수범하여 컴퓨터 공학을 전공하는 친구에게 배우고, 현재 개발자로 일하고 있는 사람들과 교수님들에게 질문하였습니다. 조원들은 끝까지 프로젝트에 매달리는 모습을 보고 조원들도 열심히 잘 따라와 주었고 그 모습이 자극제가 되어 더욱 열심히 하게 되었습니다. 결국 프로젝트에 성공하여 교수님께 인정받았습니다. 이런 모습이 리더와 구성원들에게 항상 듬직한 모습을 보였고, 그 덕분에 믿음직한 사람, 열심히 일하는 사람으로 평가받았습니다. 또한 끝까지 노력해서 실패할 것은 없다는 교훈을 얻었고, 그 생각을 제 인생의 좌우명으로 가지고 있습니다.</span>
+
+<span class="s1">[첫 도전]</span>
+<span class="s1">친구와 웹 데이터 크롤링 프로젝트를 했을 때가 가장 기억에 남습니다. 데이터 분석이라는 부분에 관심을 가지고 친구와 Python에 관해 공부하고 있을 때였습니다. 매주 목요일 친구와 카페에서 만나던 도중, 문득 카페 브랜드별로 어떤 이미지를 가졌는지 궁금했습니다. 그래서 인스타그램에서 해시태그를 가져오는 프로그램을 만들기 위해 낮에 만나서 밤에 들어가는 일은 다반사였고, 각자 집에서도 공부하여 오류를 해결하는 작업을 하였습니다. 결국 인스타그램 측에서 차단하여 카페 브랜드별로 6천 개가량의 데이터만 가져와서 분석할 수 있었습니다. 이런 상황을 겪으니 제가 문제에 닥쳤을 때 끝까지 해결하기 위해 밤낮으로 노력했던 것이 제가 열정과 끈기가 있는 사람으로 느껴졌습니다.</span>
+
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="n">textrank</span> <span class="o">=</span> <span class="n">TextRank</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">textrank</span><span class="o">.</span><span class="n">summarize</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;keywords :&#39;</span><span class="p">,</span><span class="n">textrank</span><span class="o">.</span><span class="n">keywords</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>교수님의 말씀에 조원들도 약한 마음을 가졌지만 제가 솔선수범하여 컴퓨터 공학을 전공하는 친구에게 배우고, 현재 개발자로 일하고 있는 사람들과 교수님들에게 질문하였습니다.
+
+결국 프로젝트에 성공하여 교수님께 인정받았습니다.
+
+이런 모습이 리더와 구성원들에게 항상 듬직한 모습을 보였고, 그 덕분에 믿음직한 사람, 열심히 일하는 사람으로 평가 받았습니다.
+
+keywords : [&#39;친구&#39;, &#39;사람&#39;, &#39;말씀&#39;, &#39;프로그램&#39;, &#39;조원&#39;, &#39;위해&#39;, &#39;해결&#39;, &#39;교수&#39;, &#39;데이터&#39;, &#39;인스타&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
     </div>
   </div>
 </body>
